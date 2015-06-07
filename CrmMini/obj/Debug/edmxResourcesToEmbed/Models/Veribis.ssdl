@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VdbSoftModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ACTIVITY">
+    <Key>
+      <PropertyRef Name="ACTIVITY_CODE" />
+    </Key>
+    <Property Name="ACTIVITY_CODE" Type="int" Nullable="false" />
+    <Property Name="CONTACT_CODE" Type="int" />
+    <Property Name="COMPANY_CODE" Type="int" />
+    <Property Name="OWNER" Type="int" Nullable="false" />
+    <Property Name="ACTIVITY_TYPE" Type="int" />
+    <Property Name="SDATE" Type="datetime" />
+    <Property Name="EDATE" Type="datetime" />
+    <Property Name="DURATION" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TRANSPORTINCLUDE" Type="int" />
+    <Property Name="TRANSFER_TIME" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="REGARDING" Type="int" />
+    <Property Name="NOTE" Type="nvarchar(max)" />
+    <Property Name="SUBJECT" Type="nvarchar(max)" />
+    <Property Name="LOCATION" Type="int" />
+    <Property Name="PRIORITY" Type="int" />
+    <Property Name="REMEMBER" Type="int" />
+    <Property Name="COLOR" Type="int" />
+    <Property Name="PROJECT" Type="int" />
+    <Property Name="ACTIVITY_GROUP" Type="int" />
+    <Property Name="APPOINTED_USER_CODE" Type="int" />
+    <Property Name="OPENORCLOSE" Type="int" Nullable="false" />
+    <Property Name="COST" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="COST_UNIT" Type="nvarchar" MaxLength="50" />
+    <Property Name="LAST_UPDATE_USER" Type="nvarchar" MaxLength="30" />
+    <Property Name="LAST_UPDATE" Type="datetime" />
+    <Property Name="CREATE_DATE" Type="datetime" Nullable="false" />
+    <Property Name="CREATE_USER" Type="nvarchar" MaxLength="30" />
+    <Property Name="R_CODE" Type="int" />
+    <Property Name="SOURCEACTIVITY_CODE" Type="int" />
+    <Property Name="DOCUMENT_NO1" Type="nvarchar" MaxLength="20" />
+    <Property Name="DOCUMENT_NO2" Type="nvarchar" MaxLength="20" />
+    <Property Name="EXT1" Type="nvarchar" MaxLength="200" />
+    <Property Name="EXT2" Type="nvarchar" MaxLength="200" />
+    <Property Name="BASE_TYPE" Type="int" />
+  </EntityType>
+  <EntityType Name="ADDRESS">
+    <Key>
+      <PropertyRef Name="ADDRESS_CODE" />
+    </Key>
+    <Property Name="ADDRESS_CODE" Type="int" Nullable="false" />
+    <Property Name="OWNER" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDRESS_TYPE_ID" Type="int" />
+    <Property Name="COMPANY_CODE" Type="int" />
+    <Property Name="CONTACT_CODE" Type="int" />
+    <Property Name="REGION_CODE" Type="int" />
+    <Property Name="ADDRESS1" Type="nvarchar" MaxLength="200" />
+    <Property Name="ADDRESS2" Type="nvarchar" MaxLength="200" />
+    <Property Name="ADDRESS3" Type="nvarchar" MaxLength="200" />
+    <Property Name="COUNTY" Type="nvarchar" MaxLength="100" />
+    <Property Name="CITY" Type="nvarchar" MaxLength="100" />
+    <Property Name="COUNTY1" Type="nvarchar" MaxLength="100" />
+    <Property Name="COUNTY2" Type="nvarchar" MaxLength="100" />
+    <Property Name="POSTCODE" Type="nvarchar" MaxLength="30" />
+    <Property Name="GPS_LATITUDE" Type="nvarchar" MaxLength="20" />
+    <Property Name="GPS_LONGITUDE" Type="nvarchar" MaxLength="20" />
+    <Property Name="DISTANCE" Type="int" />
+    <Property Name="LASTUP_DATE" Type="datetime" />
+    <Property Name="LAST_UPDATE_USER" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="CREATE_DATE" Type="datetime" />
+    <Property Name="CREATE_USER" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CITEMS">
+    <Key>
+      <PropertyRef Name="CODE" />
+      <PropertyRef Name="ROW_ORDER_NO" />
+    </Key>
+    <Property Name="CODE" Type="int" Nullable="false" />
+    <Property Name="ROW_ORDER_NO" Type="int" Nullable="false" />
+    <Property Name="EXP_TR" Type="nvarchar" MaxLength="50" />
+    <Property Name="EXP_EN" Type="nvarchar" MaxLength="50" />
+    <Property Name="EXP_GR" Type="nvarchar" MaxLength="50" />
+    <Property Name="ITEM2" Type="nvarchar" MaxLength="150" />
+    <Property Name="ITEM3" Type="nvarchar" MaxLength="150" />
+    <Property Name="ITEM4" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="CITY">
+    <Key>
+      <PropertyRef Name="CITY_NAME" />
+    </Key>
+    <Property Name="CITY_CODE" Type="int" Nullable="false" />
+    <Property Name="CITY_NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="COUNTRY_CODE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="COUNTRY_NAME" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CITY2">
+    <Key>
+      <PropertyRef Name="COUNTRY_CODE" />
+      <PropertyRef Name="ORDER_NO" />
+      <PropertyRef Name="CITY_CODE" />
+    </Key>
+    <Property Name="COUNTRY_CODE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ORDER_NO" Type="int" Nullable="false" />
+    <Property Name="CITY_CODE" Type="int" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="150" />
+    <Property Name="UPPER_NO" Type="int" />
+  </EntityType>
+  <EntityType Name="COMPANY">
+    <Key>
+      <PropertyRef Name="COMPANY_CODE" />
+    </Key>
+    <Property Name="COMPANY_CODE" Type="int" Nullable="false" />
+    <Property Name="UPPER_COMPANY_CODE" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="COMPANY_COMMERCIAL_CODE" Type="nvarchar" MaxLength="30" />
+    <Property Name="COMPANY_REPRESENT_CODE" Type="int" Nullable="false" />
+    <Property Name="COMPANY_NAME" Type="nvarchar" MaxLength="200" />
+    <Property Name="ADDRESS" Type="nvarchar" MaxLength="250" />
+    <Property Name="SECTOR" Type="int" />
+    <Property Name="COMPANY_SPECIAL_TYPE" Type="int" />
+    <Property Name="PHONE" Type="int" />
+    <Property Name="FAX" Type="int" />
+    <Property Name="MAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="WEBADDRESS" Type="nvarchar" MaxLength="150" />
+    <Property Name="COMPANY_REFERANCE" Type="int" />
+    <Property Name="COMPANY_TYPE" Type="int" />
+    <Property Name="FOUNDATION_DATE" Type="datetime" />
+    <Property Name="STATUS" Type="int" />
+    <Property Name="COMPANY_REGION" Type="int" />
+    <Property Name="TAX_DEPARTMENT" Type="nvarchar" MaxLength="30" />
+    <Property Name="TAX_NO" Type="nvarchar" MaxLength="30" />
+    <Property Name="CURRENCY_TYPE" Type="int" />
+    <Property Name="INVOICE_ADDRESS_CODE" Type="int" />
+    <Property Name="SHIPPING_ADDRESS_CODE" Type="int" />
+    <Property Name="COMPANY_OWNER" Type="nvarchar" MaxLength="30" />
+    <Property Name="PAYMENT_DAY" Type="nvarchar" MaxLength="30" />
+    <Property Name="PAYMENT_TYPE" Type="int" />
+    <Property Name="DISCOUNT_RATIO" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PAYMENT_PERSON" Type="nvarchar" MaxLength="30" />
+    <Property Name="PURCHASE_PERSON" Type="nvarchar" MaxLength="30" />
+    <Property Name="WAREHOUSE_PERSON" Type="nvarchar" MaxLength="30" />
+    <Property Name="ENDORSEMENT" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="CALCULATE" Type="nvarchar" MaxLength="10" />
+    <Property Name="CREATE_DATE" Type="datetime" />
+    <Property Name="CREATE_USER" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="LAST_UPDATE" Type="datetime" Nullable="false" />
+    <Property Name="LAST_UPDATE_USER" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CONTACT">
+    <Key>
+      <PropertyRef Name="CONTACT_CODE" />
+    </Key>
+    <Property Name="CONTACT_CODE" Type="int" Nullable="false" />
+    <Property Name="COMPANY_CODE" Type="int" Nullable="false" />
+    <Property Name="CONTACT_REPRESENT_CODE" Type="int" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="200" />
+    <Property Name="MIDDLE_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="SURNAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="BIRTHDATE" Type="datetime" />
+    <Property Name="NICNAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="SPACIAL_CODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="DEPARTMENT" Type="int" />
+    <Property Name="TITLE" Type="int" />
+    <Property Name="MAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="MSN" Type="nvarchar" MaxLength="100" />
+    <Property Name="PERSONALWEBADDRESS" Type="nvarchar" MaxLength="150" />
+    <Property Name="CONTACT_REFERANCE" Type="int" />
+    <Property Name="STATUS" Type="int" />
+    <Property Name="ISSPACIAL" Type="int" />
+    <Property Name="LAST_STATE" Type="nvarchar(max)" />
+    <Property Name="EDUCATION" Type="int" />
+    <Property Name="LAST_FNISHED_SCHOOL" Type="int" />
+    <Property Name="COLOR" Type="int" />
+    <Property Name="INVOICE_ADDRESS_CODE" Type="int" />
+    <Property Name="SPEC1" Type="nvarchar" MaxLength="50" />
+    <Property Name="SPEC2" Type="nvarchar" MaxLength="50" />
+    <Property Name="SPEC3" Type="nvarchar" MaxLength="50" />
+    <Property Name="FTEEM" Type="int" />
+    <Property Name="ISMARRIED" Type="int" />
+    <Property Name="ANNIVERSARY_DATE" Type="datetime" />
+    <Property Name="PARTNER_NAME" Type="nvarchar" MaxLength="30" />
+    <Property Name="PARTNER_MIDDLE_NAME" Type="nvarchar" MaxLength="30" />
+    <Property Name="PARTNER_SURNAME" Type="nvarchar" MaxLength="30" />
+    <Property Name="CHILD_COUNT" Type="int" />
+    <Property Name="MALE_CHILD_COUNT" Type="int" />
+    <Property Name="FEMALE_CHILD_COUNT" Type="int" />
+    <Property Name="HAVE_HOME" Type="int" />
+    <Property Name="HOME_RATING" Type="int" />
+    <Property Name="LAST_MEETING_DATE" Type="datetime" />
+    <Property Name="LAST_OPPORTUNITY_DATE" Type="datetime" />
+    <Property Name="LAST_OFFER_DATE" Type="datetime" />
+    <Property Name="LAST_WAYBILL_DATE" Type="datetime" />
+    <Property Name="LAST_INVOICE_DATE" Type="datetime" />
+    <Property Name="LAST_UPDATE_USER" Type="nvarchar" MaxLength="30" />
+    <Property Name="LAST_UPDATE" Type="datetime" />
+    <Property Name="CREATE_DATE" Type="datetime" />
+    <Property Name="CREATE_USER" Type="nvarchar" MaxLength="30" />
+    <Property Name="BPICTURE" Type="varbinary(max)" />
+    <Property Name="SEXUALITY" Type="int" />
+    <Property Name="PRETITLE" Type="int" />
+    <Property Name="ADDRESS" Type="int" />
+  </EntityType>
+  <EntityType Name="COUNTRY">
+    <Key>
+      <PropertyRef Name="COUNTRY_CODE" />
+    </Key>
+    <Property Name="COUNTRY_CODE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="COUNTRY_NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="CODE_NUMBER" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Vdb_Master2014.dbo.CUR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="CUR">
+    <Key>
+      <PropertyRef Name="CURDATE" />
+    </Key>
+    <Property Name="CURDATE" Type="datetime" Nullable="false" />
+    <Property Name="CURSYMBOL" Type="nvarchar" MaxLength="5" />
+    <Property Name="CUR_NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="FOREX_BUYING" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="FOREX_SELING" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="BANKNOTE_BUYING" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="BANKNOTE_SELING" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="LAST_UPDATE_USER" Type="nvarchar" MaxLength="30" />
+    <Property Name="LAST_UPDATE" Type="datetime" />
+    <Property Name="CREATE_DATE" Type="datetime" />
+    <Property Name="CREATE_USER" Type="nvarchar" MaxLength="30" />
+    <Property Name="FIX_BUYING" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="FIX_SELING" Type="decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="CURTYPE">
+    <Key>
+      <PropertyRef Name="CUR_SYMBOL" />
+    </Key>
+    <Property Name="CUR_NAME" Type="nvarchar" MaxLength="50" />
+    <Property Name="CUR_SYMBOL" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="ROW_ORDER_NO" Type="int" />
+    <Property Name="CUR_EXT" Type="int" />
+  </EntityType>
+  <EntityType Name="GROUPDES">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="int" Nullable="false" />
+    <Property Name="EXP_TR" Type="nvarchar" MaxLength="50" />
+    <Property Name="EXP_EN" Type="nvarchar" MaxLength="50" />
+    <Property Name="EXP_GR" Type="nvarchar" MaxLength="50" />
+    <Property Name="UPPER_EXIST" Type="int" Nullable="false" />
+    <Property Name="UPPER_CAPTION" Type="nvarchar" MaxLength="50" />
+    <Property Name="UPPER_FIH_NO" Type="int" />
+    <Property Name="UPPER_GROUP_CODE" Type="int" />
+    <Property Name="MTYPE" Type="int" />
+  </EntityType>
+  <EntityType Name="GROUPS">
+    <Key>
+      <PropertyRef Name="GROUP_CODE" />
+      <PropertyRef Name="ROW_ORDER_NO" />
+    </Key>
+    <Property Name="GROUP_CODE" Type="int" Nullable="false" />
+    <Property Name="ROW_ORDER_NO" Type="int" Nullable="false" />
+    <Property Name="UPPER_GROUP_CODE" Type="int" />
+    <Property Name="UPPER_GROUP_ROW_NO" Type="int" />
+    <Property Name="EXP_TR" Type="nvarchar" MaxLength="50" />
+    <Property Name="EXP_EN" Type="nvarchar" MaxLength="50" />
+    <Property Name="EXP_GR" Type="nvarchar" MaxLength="50" />
+    <Property Name="LAST_UPDATE" Type="datetime" />
+    <Property Name="LAST_UPDATE_USER" Type="nvarchar" MaxLength="30" />
+    <Property Name="CREATE_DATE" Type="datetime" />
+    <Property Name="CREATE_USER" Type="nvarchar" MaxLength="30" />
+    <Property Name="ORDER_BY" Type="int" />
+  </EntityType>
+  <EntityType Name="PHONE">
+    <Key>
+      <PropertyRef Name="PHONE_CODE" />
+    </Key>
+    <Property Name="PHONE_CODE" Type="int" Nullable="false" />
+    <Property Name="PHONE_TYPE_ID" Type="int" />
+    <Property Name="PHONE_NUMBER" Type="nvarchar" MaxLength="50" />
+    <Property Name="AREA_CODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="COUNTRY_CODE" Type="nvarchar" MaxLength="10" />
+    <Property Name="COMPANY_CODE" Type="int" />
+    <Property Name="CONTACT_CODE" Type="int" />
+    <Property Name="OWNER" Type="nvarchar" MaxLength="50" />
+    <Property Name="REGION_CODE" Type="int" />
+    <Property Name="CREATE_DATE" Type="datetime" />
+    <Property Name="CREATE_USER" Type="nvarchar" MaxLength="50" />
+    <Property Name="LASTUP_DATE" Type="datetime" />
+    <Property Name="LAST_UPDATE_USER" Type="nvarchar" MaxLength="30" />
+    <Property Name="ADDRESS_CODE" Type="int" />
+    <Property Name="INTERNAL_CODE" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="PROJECTS">
+    <Key>
+      <PropertyRef Name="PROJECT_CODE" />
+    </Key>
+    <Property Name="PROJECT_CODE" Type="int" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="COMPANY_CODE" Type="int" Nullable="false" />
+    <Property Name="CONTACT_CODE" Type="int" Nullable="false" />
+    <Property Name="OPPORTUNITY_CODE" Type="int" Nullable="false" />
+    <Property Name="CONTRACT_CODE" Type="int" Nullable="false" />
+    <Property Name="DOCUMENT_DATE" Type="datetime" Nullable="false" />
+    <Property Name="SDATE" Type="datetime" />
+    <Property Name="EDATE" Type="datetime" />
+    <Property Name="APPOINTED_USER_CODE" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="CLOSED_DATE" Type="datetime" />
+    <Property Name="CREATE_DATE" Type="datetime" Nullable="false" />
+    <Property Name="CREATE_USER" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="LAST_UPDATE" Type="datetime" Nullable="false" />
+    <Property Name="LAST_UPDATE_USER" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="ROW_ORDER_NO" Type="int" />
+    <Property Name="STOK_NAME" Type="nvarchar" MaxLength="150" />
+    <Property Name="RS_DATE" Type="datetime" />
+    <Property Name="CLOSED_USER" Type="int" />
+  </EntityType>
+  <EntityType Name="USERS">
+    <Key>
+      <PropertyRef Name="USER_CODE" />
+    </Key>
+    <Property Name="USER_CODE" Type="int" Nullable="false" />
+    <Property Name="USER_NAME" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="USER_PASSWORD" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="AUSER_NAME" Type="nvarchar" MaxLength="20" />
+    <Property Name="SURNAME" Type="nvarchar" MaxLength="20" />
+    <Property Name="USER_LANGUAGE" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="MAIL" Type="nvarchar" MaxLength="80" />
+    <Property Name="USER_RIGHT" Type="nvarchar(max)" />
+    <Property Name="ISACTIVE" Type="int" />
+    <Property Name="STARTDATE" Type="datetime" />
+    <Property Name="ENDDATE" Type="datetime" />
+    <Property Name="CONTACT_CODE" Type="int" />
+    <Property Name="LAST_UPDATE_USER" Type="nvarchar" MaxLength="30" />
+    <Property Name="LAST_UPDATE" Type="datetime" />
+    <Property Name="CREATE_DATE" Type="datetime" />
+    <Property Name="CREATE_USER" Type="nvarchar" MaxLength="30" />
+    <Property Name="TOTALWORKTIME" Type="int" />
+    <Property Name="WORKSTARTHOUR" Type="datetime" />
+    <Property Name="MAIL_USER_NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="MAIL_PASSWORD" Type="nvarchar" MaxLength="100" />
+    <Property Name="INCOMING_MAIL_SERVER" Type="nvarchar" MaxLength="100" />
+    <Property Name="OUTGOING_MAIL_SERVER" Type="nvarchar" MaxLength="100" />
+    <Property Name="POP3_PORT" Type="nvarchar" MaxLength="10" />
+    <Property Name="SMTP_PORT" Type="nvarchar" MaxLength="10" />
+    <Property Name="SSL" Type="nvarchar" MaxLength="50" />
+    <Property Name="UPPER_USER_CODE" Type="int" />
+  </EntityType>
+  <EntityContainer Name="VdbSoftModelStoreContainer">
+    <EntitySet Name="ACTIVITY" EntityType="Self.ACTIVITY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADDRESS" EntityType="Self.ADDRESS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CITEMS" EntityType="Self.CITEMS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CITY" EntityType="Self.CITY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CITY2" EntityType="Self.CITY2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMPANY" EntityType="Self.COMPANY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONTACT" EntityType="Self.CONTACT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COUNTRY" EntityType="Self.COUNTRY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CURTYPE" EntityType="Self.CURTYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GROUPDES" EntityType="Self.GROUPDES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GROUPS" EntityType="Self.GROUPS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHONE" EntityType="Self.PHONE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PROJECTS" EntityType="Self.PROJECTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USERS" EntityType="Self.USERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CUR" EntityType="Self.CUR" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CUR].[CURDATE] AS [CURDATE], 
+    [CUR].[CURSYMBOL] AS [CURSYMBOL], 
+    [CUR].[CUR_NAME] AS [CUR_NAME], 
+    [CUR].[FOREX_BUYING] AS [FOREX_BUYING], 
+    [CUR].[FOREX_SELING] AS [FOREX_SELING], 
+    [CUR].[BANKNOTE_BUYING] AS [BANKNOTE_BUYING], 
+    [CUR].[BANKNOTE_SELING] AS [BANKNOTE_SELING], 
+    [CUR].[LAST_UPDATE_USER] AS [LAST_UPDATE_USER], 
+    [CUR].[LAST_UPDATE] AS [LAST_UPDATE], 
+    [CUR].[CREATE_DATE] AS [CREATE_DATE], 
+    [CUR].[CREATE_USER] AS [CREATE_USER], 
+    [CUR].[FIX_BUYING] AS [FIX_BUYING], 
+    [CUR].[FIX_SELING] AS [FIX_SELING]
+    FROM [dbo].[CUR] AS [CUR]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

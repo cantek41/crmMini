@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "timePlane";
+    int count = 15;
+}
+<div class="container-fluid">
+    <h2>timePlane</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <div class="row">
+        <div class="col-xs-18 col-md-12">
+         @Html.Partial("_timeGridPartial","Grid")
+        </div>
+    </div>
+</div>

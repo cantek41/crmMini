@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VdbSoftModelStoreContainer" CdmEntityContainer="VdbSoftEntities1">
+    <EntitySetMapping Name="ACTIVITies">
+      <EntityTypeMapping TypeName="VdbSoftModel.ACTIVITY">
+        <MappingFragment StoreEntitySet="ACTIVITY">
+          <ScalarProperty Name="ACTIVITY_CODE" ColumnName="ACTIVITY_CODE" />
+          <ScalarProperty Name="CONTACT_CODE" ColumnName="CONTACT_CODE" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="OWNER" ColumnName="OWNER" />
+          <ScalarProperty Name="ACTIVITY_TYPE" ColumnName="ACTIVITY_TYPE" />
+          <ScalarProperty Name="SDATE" ColumnName="SDATE" />
+          <ScalarProperty Name="EDATE" ColumnName="EDATE" />
+          <ScalarProperty Name="DURATION" ColumnName="DURATION" />
+          <ScalarProperty Name="TRANSPORTINCLUDE" ColumnName="TRANSPORTINCLUDE" />
+          <ScalarProperty Name="TRANSFER_TIME" ColumnName="TRANSFER_TIME" />
+          <ScalarProperty Name="REGARDING" ColumnName="REGARDING" />
+          <ScalarProperty Name="NOTE" ColumnName="NOTE" />
+          <ScalarProperty Name="SUBJECT" ColumnName="SUBJECT" />
+          <ScalarProperty Name="LOCATION" ColumnName="LOCATION" />
+          <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+          <ScalarProperty Name="REMEMBER" ColumnName="REMEMBER" />
+          <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+          <ScalarProperty Name="PROJECT" ColumnName="PROJECT" />
+          <ScalarProperty Name="ACTIVITY_GROUP" ColumnName="ACTIVITY_GROUP" />
+          <ScalarProperty Name="APPOINTED_USER_CODE" ColumnName="APPOINTED_USER_CODE" />
+          <ScalarProperty Name="OPENORCLOSE" ColumnName="OPENORCLOSE" />
+          <ScalarProperty Name="COST" ColumnName="COST" />
+          <ScalarProperty Name="COST_UNIT" ColumnName="COST_UNIT" />
+          <ScalarProperty Name="LAST_UPDATE_USER" ColumnName="LAST_UPDATE_USER" />
+          <ScalarProperty Name="LAST_UPDATE" ColumnName="LAST_UPDATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="R_CODE" ColumnName="R_CODE" />
+          <ScalarProperty Name="SOURCEACTIVITY_CODE" ColumnName="SOURCEACTIVITY_CODE" />
+          <ScalarProperty Name="DOCUMENT_NO1" ColumnName="DOCUMENT_NO1" />
+          <ScalarProperty Name="DOCUMENT_NO2" ColumnName="DOCUMENT_NO2" />
+          <ScalarProperty Name="EXT1" ColumnName="EXT1" />
+          <ScalarProperty Name="EXT2" ColumnName="EXT2" />
+          <ScalarProperty Name="BASE_TYPE" ColumnName="BASE_TYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADDRESSes">
+      <EntityTypeMapping TypeName="VdbSoftModel.ADDRESS">
+        <MappingFragment StoreEntitySet="ADDRESS">
+          <ScalarProperty Name="ADDRESS_CODE" ColumnName="ADDRESS_CODE" />
+          <ScalarProperty Name="OWNER" ColumnName="OWNER" />
+          <ScalarProperty Name="ADDRESS_TYPE_ID" ColumnName="ADDRESS_TYPE_ID" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="CONTACT_CODE" ColumnName="CONTACT_CODE" />
+          <ScalarProperty Name="REGION_CODE" ColumnName="REGION_CODE" />
+          <ScalarProperty Name="ADDRESS1" ColumnName="ADDRESS1" />
+          <ScalarProperty Name="ADDRESS2" ColumnName="ADDRESS2" />
+          <ScalarProperty Name="ADDRESS3" ColumnName="ADDRESS3" />
+          <ScalarProperty Name="COUNTY" ColumnName="COUNTY" />
+          <ScalarProperty Name="CITY" ColumnName="CITY" />
+          <ScalarProperty Name="COUNTY1" ColumnName="COUNTY1" />
+          <ScalarProperty Name="COUNTY2" ColumnName="COUNTY2" />
+          <ScalarProperty Name="POSTCODE" ColumnName="POSTCODE" />
+          <ScalarProperty Name="GPS_LATITUDE" ColumnName="GPS_LATITUDE" />
+          <ScalarProperty Name="GPS_LONGITUDE" ColumnName="GPS_LONGITUDE" />
+          <ScalarProperty Name="DISTANCE" ColumnName="DISTANCE" />
+          <ScalarProperty Name="LASTUP_DATE" ColumnName="LASTUP_DATE" />
+          <ScalarProperty Name="LAST_UPDATE_USER" ColumnName="LAST_UPDATE_USER" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CITEMS">
+      <EntityTypeMapping TypeName="VdbSoftModel.CITEM">
+        <MappingFragment StoreEntitySet="CITEMS">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="ROW_ORDER_NO" ColumnName="ROW_ORDER_NO" />
+          <ScalarProperty Name="EXP_TR" ColumnName="EXP_TR" />
+          <ScalarProperty Name="EXP_EN" ColumnName="EXP_EN" />
+          <ScalarProperty Name="EXP_GR" ColumnName="EXP_GR" />
+          <ScalarProperty Name="ITEM2" ColumnName="ITEM2" />
+          <ScalarProperty Name="ITEM3" ColumnName="ITEM3" />
+          <ScalarProperty Name="ITEM4" ColumnName="ITEM4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CITies">
+      <EntityTypeMapping TypeName="VdbSoftModel.CITY">
+        <MappingFragment StoreEntitySet="CITY">
+          <ScalarProperty Name="CITY_CODE" ColumnName="CITY_CODE" />
+          <ScalarProperty Name="CITY_NAME" ColumnName="CITY_NAME" />
+          <ScalarProperty Name="COUNTRY_CODE" ColumnName="COUNTRY_CODE" />
+          <ScalarProperty Name="COUNTRY_NAME" ColumnName="COUNTRY_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CITY2">
+      <EntityTypeMapping TypeName="VdbSoftModel.CITY2">
+        <MappingFragment StoreEntitySet="CITY2">
+          <ScalarProperty Name="COUNTRY_CODE" ColumnName="COUNTRY_CODE" />
+          <ScalarProperty Name="ORDER_NO" ColumnName="ORDER_NO" />
+          <ScalarProperty Name="CITY_CODE" ColumnName="CITY_CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="UPPER_NO" ColumnName="UPPER_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPANies">
+      <EntityTypeMapping TypeName="VdbSoftModel.COMPANY">
+        <MappingFragment StoreEntitySet="COMPANY">
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="UPPER_COMPANY_CODE" ColumnName="UPPER_COMPANY_CODE" />
+          <ScalarProperty Name="COMPANY_COMMERCIAL_CODE" ColumnName="COMPANY_COMMERCIAL_CODE" />
+          <ScalarProperty Name="COMPANY_REPRESENT_CODE" ColumnName="COMPANY_REPRESENT_CODE" />
+          <ScalarProperty Name="COMPANY_NAME" ColumnName="COMPANY_NAME" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="SECTOR" ColumnName="SECTOR" />
+          <ScalarProperty Name="COMPANY_SPECIAL_TYPE" ColumnName="COMPANY_SPECIAL_TYPE" />
+          <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+          <ScalarProperty Name="WEBADDRESS" ColumnName="WEBADDRESS" />
+          <ScalarProperty Name="COMPANY_REFERANCE" ColumnName="COMPANY_REFERANCE" />
+          <ScalarProperty Name="COMPANY_TYPE" ColumnName="COMPANY_TYPE" />
+          <ScalarProperty Name="FOUNDATION_DATE" ColumnName="FOUNDATION_DATE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="COMPANY_REGION" ColumnName="COMPANY_REGION" />
+          <ScalarProperty Name="TAX_DEPARTMENT" ColumnName="TAX_DEPARTMENT" />
+          <ScalarProperty Name="TAX_NO" ColumnName="TAX_NO" />
+          <ScalarProperty Name="CURRENCY_TYPE" ColumnName="CURRENCY_TYPE" />
+          <ScalarProperty Name="INVOICE_ADDRESS_CODE" ColumnName="INVOICE_ADDRESS_CODE" />
+          <ScalarProperty Name="SHIPPING_ADDRESS_CODE" ColumnName="SHIPPING_ADDRESS_CODE" />
+          <ScalarProperty Name="COMPANY_OWNER" ColumnName="COMPANY_OWNER" />
+          <ScalarProperty Name="PAYMENT_DAY" ColumnName="PAYMENT_DAY" />
+          <ScalarProperty Name="PAYMENT_TYPE" ColumnName="PAYMENT_TYPE" />
+          <ScalarProperty Name="DISCOUNT_RATIO" ColumnName="DISCOUNT_RATIO" />
+          <ScalarProperty Name="PAYMENT_PERSON" ColumnName="PAYMENT_PERSON" />
+          <ScalarProperty Name="PURCHASE_PERSON" ColumnName="PURCHASE_PERSON" />
+          <ScalarProperty Name="WAREHOUSE_PERSON" ColumnName="WAREHOUSE_PERSON" />
+          <ScalarProperty Name="ENDORSEMENT" ColumnName="ENDORSEMENT" />
+          <ScalarProperty Name="CALCULATE" ColumnName="CALCULATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="LAST_UPDATE" ColumnName="LAST_UPDATE" />
+          <ScalarProperty Name="LAST_UPDATE_USER" ColumnName="LAST_UPDATE_USER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTACTs">
+      <EntityTypeMapping TypeName="VdbSoftModel.CONTACT">
+        <MappingFragment StoreEntitySet="CONTACT">
+          <ScalarProperty Name="CONTACT_CODE" ColumnName="CONTACT_CODE" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="CONTACT_REPRESENT_CODE" ColumnName="CONTACT_REPRESENT_CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="MIDDLE_NAME" ColumnName="MIDDLE_NAME" />
+          <ScalarProperty Name="SURNAME" ColumnName="SURNAME" />
+          <ScalarProperty Name="BIRTHDATE" ColumnName="BIRTHDATE" />
+          <ScalarProperty Name="NICNAME" ColumnName="NICNAME" />
+          <ScalarProperty Name="SPACIAL_CODE" ColumnName="SPACIAL_CODE" />
+          <ScalarProperty Name="DEPARTMENT" ColumnName="DEPARTMENT" />
+          <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+          <ScalarProperty Name="MSN" ColumnName="MSN" />
+          <ScalarProperty Name="PERSONALWEBADDRESS" ColumnName="PERSONALWEBADDRESS" />
+          <ScalarProperty Name="CONTACT_REFERANCE" ColumnName="CONTACT_REFERANCE" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="ISSPACIAL" ColumnName="ISSPACIAL" />
+          <ScalarProperty Name="LAST_STATE" ColumnName="LAST_STATE" />
+          <ScalarProperty Name="EDUCATION" ColumnName="EDUCATION" />
+          <ScalarProperty Name="LAST_FNISHED_SCHOOL" ColumnName="LAST_FNISHED_SCHOOL" />
+          <ScalarProperty Name="COLOR" ColumnName="COLOR" />
+          <ScalarProperty Name="INVOICE_ADDRESS_CODE" ColumnName="INVOICE_ADDRESS_CODE" />
+          <ScalarProperty Name="SPEC1" ColumnName="SPEC1" />
+          <ScalarProperty Name="SPEC2" ColumnName="SPEC2" />
+          <ScalarProperty Name="SPEC3" ColumnName="SPEC3" />
+          <ScalarProperty Name="FTEEM" ColumnName="FTEEM" />
+          <ScalarProperty Name="ISMARRIED" ColumnName="ISMARRIED" />
+          <ScalarProperty Name="ANNIVERSARY_DATE" ColumnName="ANNIVERSARY_DATE" />
+          <ScalarProperty Name="PARTNER_NAME" ColumnName="PARTNER_NAME" />
+          <ScalarProperty Name="PARTNER_MIDDLE_NAME" ColumnName="PARTNER_MIDDLE_NAME" />
+          <ScalarProperty Name="PARTNER_SURNAME" ColumnName="PARTNER_SURNAME" />
+          <ScalarProperty Name="CHILD_COUNT" ColumnName="CHILD_COUNT" />
+          <ScalarProperty Name="MALE_CHILD_COUNT" ColumnName="MALE_CHILD_COUNT" />
+          <ScalarProperty Name="FEMALE_CHILD_COUNT" ColumnName="FEMALE_CHILD_COUNT" />
+          <ScalarProperty Name="HAVE_HOME" ColumnName="HAVE_HOME" />
+          <ScalarProperty Name="HOME_RATING" ColumnName="HOME_RATING" />
+          <ScalarProperty Name="LAST_MEETING_DATE" ColumnName="LAST_MEETING_DATE" />
+          <ScalarProperty Name="LAST_OPPORTUNITY_DATE" ColumnName="LAST_OPPORTUNITY_DATE" />
+          <ScalarProperty Name="LAST_OFFER_DATE" ColumnName="LAST_OFFER_DATE" />
+          <ScalarProperty Name="LAST_WAYBILL_DATE" ColumnName="LAST_WAYBILL_DATE" />
+          <ScalarProperty Name="LAST_INVOICE_DATE" ColumnName="LAST_INVOICE_DATE" />
+          <ScalarProperty Name="LAST_UPDATE_USER" ColumnName="LAST_UPDATE_USER" />
+          <ScalarProperty Name="LAST_UPDATE" ColumnName="LAST_UPDATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="BPICTURE" ColumnName="BPICTURE" />
+          <ScalarProperty Name="SEXUALITY" ColumnName="SEXUALITY" />
+          <ScalarProperty Name="PRETITLE" ColumnName="PRETITLE" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CURTYPEs">
+      <EntityTypeMapping TypeName="VdbSoftModel.CURTYPE">
+        <MappingFragment StoreEntitySet="CURTYPE">
+          <ScalarProperty Name="CUR_NAME" ColumnName="CUR_NAME" />
+          <ScalarProperty Name="CUR_SYMBOL" ColumnName="CUR_SYMBOL" />
+          <ScalarProperty Name="ROW_ORDER_NO" ColumnName="ROW_ORDER_NO" />
+          <ScalarProperty Name="CUR_EXT" ColumnName="CUR_EXT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GROUPDES">
+      <EntityTypeMapping TypeName="VdbSoftModel.GROUPDE">
+        <MappingFragment StoreEntitySet="GROUPDES">
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="EXP_TR" ColumnName="EXP_TR" />
+          <ScalarProperty Name="EXP_EN" ColumnName="EXP_EN" />
+          <ScalarProperty Name="EXP_GR" ColumnName="EXP_GR" />
+          <ScalarProperty Name="UPPER_EXIST" ColumnName="UPPER_EXIST" />
+          <ScalarProperty Name="UPPER_CAPTION" ColumnName="UPPER_CAPTION" />
+          <ScalarProperty Name="UPPER_FIH_NO" ColumnName="UPPER_FIH_NO" />
+          <ScalarProperty Name="UPPER_GROUP_CODE" ColumnName="UPPER_GROUP_CODE" />
+          <ScalarProperty Name="MTYPE" ColumnName="MTYPE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GROUPS">
+      <EntityTypeMapping TypeName="VdbSoftModel.GROUP">
+        <MappingFragment StoreEntitySet="GROUPS">
+          <ScalarProperty Name="GROUP_CODE" ColumnName="GROUP_CODE" />
+          <ScalarProperty Name="ROW_ORDER_NO" ColumnName="ROW_ORDER_NO" />
+          <ScalarProperty Name="UPPER_GROUP_CODE" ColumnName="UPPER_GROUP_CODE" />
+          <ScalarProperty Name="UPPER_GROUP_ROW_NO" ColumnName="UPPER_GROUP_ROW_NO" />
+          <ScalarProperty Name="EXP_TR" ColumnName="EXP_TR" />
+          <ScalarProperty Name="EXP_EN" ColumnName="EXP_EN" />
+          <ScalarProperty Name="EXP_GR" ColumnName="EXP_GR" />
+          <ScalarProperty Name="LAST_UPDATE" ColumnName="LAST_UPDATE" />
+          <ScalarProperty Name="LAST_UPDATE_USER" ColumnName="LAST_UPDATE_USER" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="ORDER_BY" ColumnName="ORDER_BY" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USERS">
+      <EntityTypeMapping TypeName="VdbSoftModel.USER">
+        <MappingFragment StoreEntitySet="USERS">
+          <ScalarProperty Name="USER_CODE" ColumnName="USER_CODE" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="USER_PASSWORD" ColumnName="USER_PASSWORD" />
+          <ScalarProperty Name="AUSER_NAME" ColumnName="AUSER_NAME" />
+          <ScalarProperty Name="SURNAME" ColumnName="SURNAME" />
+          <ScalarProperty Name="USER_LANGUAGE" ColumnName="USER_LANGUAGE" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+          <ScalarProperty Name="USER_RIGHT" ColumnName="USER_RIGHT" />
+          <ScalarProperty Name="ISACTIVE" ColumnName="ISACTIVE" />
+          <ScalarProperty Name="STARTDATE" ColumnName="STARTDATE" />
+          <ScalarProperty Name="ENDDATE" ColumnName="ENDDATE" />
+          <ScalarProperty Name="CONTACT_CODE" ColumnName="CONTACT_CODE" />
+          <ScalarProperty Name="LAST_UPDATE_USER" ColumnName="LAST_UPDATE_USER" />
+          <ScalarProperty Name="LAST_UPDATE" ColumnName="LAST_UPDATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="TOTALWORKTIME" ColumnName="TOTALWORKTIME" />
+          <ScalarProperty Name="WORKSTARTHOUR" ColumnName="WORKSTARTHOUR" />
+          <ScalarProperty Name="MAIL_USER_NAME" ColumnName="MAIL_USER_NAME" />
+          <ScalarProperty Name="MAIL_PASSWORD" ColumnName="MAIL_PASSWORD" />
+          <ScalarProperty Name="INCOMING_MAIL_SERVER" ColumnName="INCOMING_MAIL_SERVER" />
+          <ScalarProperty Name="OUTGOING_MAIL_SERVER" ColumnName="OUTGOING_MAIL_SERVER" />
+          <ScalarProperty Name="POP3_PORT" ColumnName="POP3_PORT" />
+          <ScalarProperty Name="SMTP_PORT" ColumnName="SMTP_PORT" />
+          <ScalarProperty Name="SSL" ColumnName="SSL" />
+          <ScalarProperty Name="UPPER_USER_CODE" ColumnName="UPPER_USER_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CURs">
+      <EntityTypeMapping TypeName="VdbSoftModel.CUR">
+        <MappingFragment StoreEntitySet="CUR">
+          <ScalarProperty Name="CURDATE" ColumnName="CURDATE" />
+          <ScalarProperty Name="CURSYMBOL" ColumnName="CURSYMBOL" />
+          <ScalarProperty Name="CUR_NAME" ColumnName="CUR_NAME" />
+          <ScalarProperty Name="FOREX_BUYING" ColumnName="FOREX_BUYING" />
+          <ScalarProperty Name="FOREX_SELING" ColumnName="FOREX_SELING" />
+          <ScalarProperty Name="BANKNOTE_BUYING" ColumnName="BANKNOTE_BUYING" />
+          <ScalarProperty Name="BANKNOTE_SELING" ColumnName="BANKNOTE_SELING" />
+          <ScalarProperty Name="LAST_UPDATE_USER" ColumnName="LAST_UPDATE_USER" />
+          <ScalarProperty Name="LAST_UPDATE" ColumnName="LAST_UPDATE" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="FIX_BUYING" ColumnName="FIX_BUYING" />
+          <ScalarProperty Name="FIX_SELING" ColumnName="FIX_SELING" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROJECTS">
+      <EntityTypeMapping TypeName="VdbSoftModel.PROJECT">
+        <MappingFragment StoreEntitySet="PROJECTS">
+          <ScalarProperty Name="CLOSED_USER" ColumnName="CLOSED_USER" />
+          <ScalarProperty Name="RS_DATE" ColumnName="RS_DATE" />
+          <ScalarProperty Name="STOK_NAME" ColumnName="STOK_NAME" />
+          <ScalarProperty Name="ROW_ORDER_NO" ColumnName="ROW_ORDER_NO" />
+          <ScalarProperty Name="LAST_UPDATE_USER" ColumnName="LAST_UPDATE_USER" />
+          <ScalarProperty Name="LAST_UPDATE" ColumnName="LAST_UPDATE" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="CLOSED_DATE" ColumnName="CLOSED_DATE" />
+          <ScalarProperty Name="APPOINTED_USER_CODE" ColumnName="APPOINTED_USER_CODE" />
+          <ScalarProperty Name="EDATE" ColumnName="EDATE" />
+          <ScalarProperty Name="SDATE" ColumnName="SDATE" />
+          <ScalarProperty Name="DOCUMENT_DATE" ColumnName="DOCUMENT_DATE" />
+          <ScalarProperty Name="CONTRACT_CODE" ColumnName="CONTRACT_CODE" />
+          <ScalarProperty Name="OPPORTUNITY_CODE" ColumnName="OPPORTUNITY_CODE" />
+          <ScalarProperty Name="CONTACT_CODE" ColumnName="CONTACT_CODE" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="PROJECT_CODE" ColumnName="PROJECT_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COUNTRies">
+      <EntityTypeMapping TypeName="VdbSoftModel.COUNTRY">
+        <MappingFragment StoreEntitySet="COUNTRY">
+          <ScalarProperty Name="CODE_NUMBER" ColumnName="CODE_NUMBER" />
+          <ScalarProperty Name="COUNTRY_NAME" ColumnName="COUNTRY_NAME" />
+          <ScalarProperty Name="COUNTRY_CODE" ColumnName="COUNTRY_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHONEs">
+      <EntityTypeMapping TypeName="VdbSoftModel.PHONE">
+        <MappingFragment StoreEntitySet="PHONE">
+          <ScalarProperty Name="INTERNAL_CODE" ColumnName="INTERNAL_CODE" />
+          <ScalarProperty Name="ADDRESS_CODE" ColumnName="ADDRESS_CODE" />
+          <ScalarProperty Name="LAST_UPDATE_USER" ColumnName="LAST_UPDATE_USER" />
+          <ScalarProperty Name="LASTUP_DATE" ColumnName="LASTUP_DATE" />
+          <ScalarProperty Name="CREATE_USER" ColumnName="CREATE_USER" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="REGION_CODE" ColumnName="REGION_CODE" />
+          <ScalarProperty Name="OWNER" ColumnName="OWNER" />
+          <ScalarProperty Name="CONTACT_CODE" ColumnName="CONTACT_CODE" />
+          <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+          <ScalarProperty Name="COUNTRY_CODE" ColumnName="COUNTRY_CODE" />
+          <ScalarProperty Name="AREA_CODE" ColumnName="AREA_CODE" />
+          <ScalarProperty Name="PHONE_NUMBER" ColumnName="PHONE_NUMBER" />
+          <ScalarProperty Name="PHONE_TYPE_ID" ColumnName="PHONE_TYPE_ID" />
+          <ScalarProperty Name="PHONE_CODE" ColumnName="PHONE_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

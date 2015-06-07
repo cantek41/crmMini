@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VdbSoftModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ACTIVITY">
+    <Key>
+      <PropertyRef Name="ACTIVITY_CODE" />
+    </Key>
+    <Property Name="ACTIVITY_CODE" Type="Int32" Nullable="false" />
+    <Property Name="CONTACT_CODE" Type="Int32" />
+    <Property Name="COMPANY_CODE" Type="Int32" />
+    <Property Name="OWNER" Type="Int32" Nullable="false" />
+    <Property Name="ACTIVITY_TYPE" Type="Int32" />
+    <Property Name="SDATE" Type="DateTime" Precision="3" />
+    <Property Name="EDATE" Type="DateTime" Precision="3" />
+    <Property Name="DURATION" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="TRANSPORTINCLUDE" Type="Int32" />
+    <Property Name="TRANSFER_TIME" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="REGARDING" Type="Int32" />
+    <Property Name="NOTE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SUBJECT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LOCATION" Type="Int32" />
+    <Property Name="PRIORITY" Type="Int32" />
+    <Property Name="REMEMBER" Type="Int32" />
+    <Property Name="COLOR" Type="Int32" />
+    <Property Name="PROJECT" Type="Int32" />
+    <Property Name="ACTIVITY_GROUP" Type="Int32" />
+    <Property Name="APPOINTED_USER_CODE" Type="Int32" />
+    <Property Name="OPENORCLOSE" Type="Int32" Nullable="false" />
+    <Property Name="COST" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="COST_UNIT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LAST_UPDATE_USER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="LAST_UPDATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATE_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CREATE_USER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="R_CODE" Type="Int32" />
+    <Property Name="SOURCEACTIVITY_CODE" Type="Int32" />
+    <Property Name="DOCUMENT_NO1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DOCUMENT_NO2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EXT1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="EXT2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="BASE_TYPE" Type="Int32" />
+  </EntityType>
+  <EntityType Name="ADDRESS">
+    <Key>
+      <PropertyRef Name="ADDRESS_CODE" />
+    </Key>
+    <Property Name="ADDRESS_CODE" Type="Int32" Nullable="false" />
+    <Property Name="OWNER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ADDRESS_TYPE_ID" Type="Int32" />
+    <Property Name="COMPANY_CODE" Type="Int32" />
+    <Property Name="CONTACT_CODE" Type="Int32" />
+    <Property Name="REGION_CODE" Type="Int32" />
+    <Property Name="ADDRESS1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ADDRESS2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ADDRESS3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="COUNTY" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CITY" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="COUNTY1" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="COUNTY2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="POSTCODE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="GPS_LATITUDE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="GPS_LONGITUDE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DISTANCE" Type="Int32" />
+    <Property Name="LASTUP_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_UPDATE_USER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CREATE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATE_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CITEM">
+    <Key>
+      <PropertyRef Name="CODE" />
+      <PropertyRef Name="ROW_ORDER_NO" />
+    </Key>
+    <Property Name="CODE" Type="Int32" Nullable="false" />
+    <Property Name="ROW_ORDER_NO" Type="Int32" Nullable="false" />
+    <Property Name="EXP_TR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EXP_EN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EXP_GR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ITEM2" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ITEM3" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ITEM4" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CITY">
+    <Key>
+      <PropertyRef Name="CITY_NAME" />
+    </Key>
+    <Property Name="CITY_CODE" Type="Int32" Nullable="false" />
+    <Property Name="CITY_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="COUNTRY_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="COUNTRY_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CITY2">
+    <Key>
+      <PropertyRef Name="COUNTRY_CODE" />
+      <PropertyRef Name="ORDER_NO" />
+      <PropertyRef Name="CITY_CODE" />
+    </Key>
+    <Property Name="COUNTRY_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ORDER_NO" Type="Int32" Nullable="false" />
+    <Property Name="CITY_CODE" Type="Int32" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="UPPER_NO" Type="Int32" />
+  </EntityType>
+  <EntityType Name="COMPANY">
+    <Key>
+      <PropertyRef Name="COMPANY_CODE" />
+    </Key>
+    <Property Name="COMPANY_CODE" Type="Int32" Nullable="false" />
+    <Property Name="UPPER_COMPANY_CODE" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="COMPANY_COMMERCIAL_CODE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="COMPANY_REPRESENT_CODE" Type="Int32" Nullable="false" />
+    <Property Name="COMPANY_NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ADDRESS" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="SECTOR" Type="Int32" />
+    <Property Name="COMPANY_SPECIAL_TYPE" Type="Int32" />
+    <Property Name="PHONE" Type="Int32" />
+    <Property Name="FAX" Type="Int32" />
+    <Property Name="MAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WEBADDRESS" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="COMPANY_REFERANCE" Type="Int32" />
+    <Property Name="COMPANY_TYPE" Type="Int32" />
+    <Property Name="FOUNDATION_DATE" Type="DateTime" Precision="3" />
+    <Property Name="STATUS" Type="Int32" />
+    <Property Name="COMPANY_REGION" Type="Int32" />
+    <Property Name="TAX_DEPARTMENT" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="TAX_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="CURRENCY_TYPE" Type="Int32" />
+    <Property Name="INVOICE_ADDRESS_CODE" Type="Int32" />
+    <Property Name="SHIPPING_ADDRESS_CODE" Type="Int32" />
+    <Property Name="COMPANY_OWNER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PAYMENT_DAY" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PAYMENT_TYPE" Type="Int32" />
+    <Property Name="DISCOUNT_RATIO" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="PAYMENT_PERSON" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PURCHASE_PERSON" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="WAREHOUSE_PERSON" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ENDORSEMENT" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CALCULATE" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CREATE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATE_USER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LAST_UPDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LAST_UPDATE_USER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CONTACT">
+    <Key>
+      <PropertyRef Name="CONTACT_CODE" />
+    </Key>
+    <Property Name="CONTACT_CODE" Type="Int32" Nullable="false" />
+    <Property Name="COMPANY_CODE" Type="Int32" Nullable="false" />
+    <Property Name="CONTACT_REPRESENT_CODE" Type="Int32" Nullable="false" />
+    <Property Name="NAME" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="MIDDLE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SURNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BIRTHDATE" Type="DateTime" Precision="3" />
+    <Property Name="NICNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPACIAL_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DEPARTMENT" Type="Int32" />
+    <Property Name="TITLE" Type="Int32" />
+    <Property Name="MAIL" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MSN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PERSONALWEBADDRESS" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CONTACT_REFERANCE" Type="Int32" />
+    <Property Name="STATUS" Type="Int32" />
+    <Property Name="ISSPACIAL" Type="Int32" />
+    <Property Name="LAST_STATE" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EDUCATION" Type="Int32" />
+    <Property Name="LAST_FNISHED_SCHOOL" Type="Int32" />
+    <Property Name="COLOR" Type="Int32" />
+    <Property Name="INVOICE_ADDRESS_CODE" Type="Int32" />
+    <Property Name="SPEC1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FTEEM" Type="Int32" />
+    <Property Name="ISMARRIED" Type="Int32" />
+    <Property Name="ANNIVERSARY_DATE" Type="DateTime" Precision="3" />
+    <Property Name="PARTNER_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PARTNER_MIDDLE_NAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PARTNER_SURNAME" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="CHILD_COUNT" Type="Int32" />
+    <Property Name="MALE_CHILD_COUNT" Type="Int32" />
+    <Property Name="FEMALE_CHILD_COUNT" Type="Int32" />
+    <Property Name="HAVE_HOME" Type="Int32" />
+    <Property Name="HOME_RATING" Type="Int32" />
+    <Property Name="LAST_MEETING_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_OPPORTUNITY_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_OFFER_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_WAYBILL_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_INVOICE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_UPDATE_USER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="LAST_UPDATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATE_USER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="BPICTURE" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="SEXUALITY" Type="Int32" />
+    <Property Name="PRETITLE" Type="Int32" />
+    <Property Name="ADDRESS" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CURTYPE">
+    <Key>
+      <PropertyRef Name="CUR_SYMBOL" />
+    </Key>
+    <Property Name="CUR_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CUR_SYMBOL" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ROW_ORDER_NO" Type="Int32" />
+    <Property Name="CUR_EXT" Type="Int32" />
+  </EntityType>
+  <EntityType Name="GROUPDE">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="Int32" Nullable="false" />
+    <Property Name="EXP_TR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EXP_EN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EXP_GR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UPPER_EXIST" Type="Int32" Nullable="false" />
+    <Property Name="UPPER_CAPTION" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UPPER_FIH_NO" Type="Int32" />
+    <Property Name="UPPER_GROUP_CODE" Type="Int32" />
+    <Property Name="MTYPE" Type="Int32" />
+  </EntityType>
+  <EntityType Name="GROUP">
+    <Key>
+      <PropertyRef Name="GROUP_CODE" />
+      <PropertyRef Name="ROW_ORDER_NO" />
+    </Key>
+    <Property Name="GROUP_CODE" Type="Int32" Nullable="false" />
+    <Property Name="ROW_ORDER_NO" Type="Int32" Nullable="false" />
+    <Property Name="UPPER_GROUP_CODE" Type="Int32" />
+    <Property Name="UPPER_GROUP_ROW_NO" Type="Int32" />
+    <Property Name="EXP_TR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EXP_EN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EXP_GR" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LAST_UPDATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_UPDATE_USER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="CREATE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATE_USER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ORDER_BY" Type="Int32" />
+  </EntityType>
+  <EntityType Name="USER">
+    <Key>
+      <PropertyRef Name="USER_CODE" />
+    </Key>
+    <Property Name="USER_CODE" Type="Int32" Nullable="false" />
+    <Property Name="USER_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="USER_PASSWORD" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AUSER_NAME" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SURNAME" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="USER_LANGUAGE" Type="String" MaxLength="5" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MAIL" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="USER_RIGHT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ISACTIVE" Type="Int32" />
+    <Property Name="STARTDATE" Type="DateTime" Precision="3" />
+    <Property Name="ENDDATE" Type="DateTime" Precision="3" />
+    <Property Name="CONTACT_CODE" Type="Int32" />
+    <Property Name="LAST_UPDATE_USER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="LAST_UPDATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATE_USER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="TOTALWORKTIME" Type="Int32" />
+    <Property Name="WORKSTARTHOUR" Type="DateTime" Precision="3" />
+    <Property Name="MAIL_USER_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MAIL_PASSWORD" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="INCOMING_MAIL_SERVER" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="OUTGOING_MAIL_SERVER" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="POP3_PORT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="SMTP_PORT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="SSL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UPPER_USER_CODE" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CUR">
+    <Key>
+      <PropertyRef Name="CURDATE" />
+    </Key>
+    <Property Name="CURDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CURSYMBOL" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="CUR_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FOREX_BUYING" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="FOREX_SELING" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="BANKNOTE_BUYING" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="BANKNOTE_SELING" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="LAST_UPDATE_USER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="LAST_UPDATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATE_USER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="FIX_BUYING" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="FIX_SELING" Type="Decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityContainer Name="VdbSoftEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ACTIVITies" EntityType="Self.ACTIVITY" />
+    <EntitySet Name="ADDRESSes" EntityType="Self.ADDRESS" />
+    <EntitySet Name="CITEMS" EntityType="Self.CITEM" />
+    <EntitySet Name="CITies" EntityType="Self.CITY" />
+    <EntitySet Name="CITY2" EntityType="Self.CITY2" />
+    <EntitySet Name="COMPANies" EntityType="Self.COMPANY" />
+    <EntitySet Name="CONTACTs" EntityType="Self.CONTACT" />
+    <EntitySet Name="CURTYPEs" EntityType="Self.CURTYPE" />
+    <EntitySet Name="GROUPDES" EntityType="Self.GROUPDE" />
+    <EntitySet Name="GROUPS" EntityType="Self.GROUP" />
+    <EntitySet Name="USERS" EntityType="Self.USER" />
+    <EntitySet Name="CURs" EntityType="Self.CUR" />
+    <EntitySet Name="PROJECTS" EntityType="VdbSoftModel.PROJECT" />
+    <EntitySet Name="COUNTRies" EntityType="VdbSoftModel.COUNTRY" />
+    <EntitySet Name="PHONEs" EntityType="VdbSoftModel.PHONE" />
+  </EntityContainer>
+  <EntityType Name="PROJECT">
+    <Key>
+      <PropertyRef Name="PROJECT_CODE" />
+    </Key>
+    <Property Name="PROJECT_CODE" Type="Int32" Nullable="false" />
+    <Property Name="NAME" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="COMPANY_CODE" Type="Int32" Nullable="false" />
+    <Property Name="CONTACT_CODE" Type="Int32" Nullable="false" />
+    <Property Name="OPPORTUNITY_CODE" Type="Int32" Nullable="false" />
+    <Property Name="CONTRACT_CODE" Type="Int32" Nullable="false" />
+    <Property Name="DOCUMENT_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SDATE" Type="DateTime" Precision="3" />
+    <Property Name="EDATE" Type="DateTime" Precision="3" />
+    <Property Name="APPOINTED_USER_CODE" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="CLOSED_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATE_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CREATE_USER" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="LAST_UPDATE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LAST_UPDATE_USER" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ROW_ORDER_NO" Type="Int32" />
+    <Property Name="STOK_NAME" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="RS_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CLOSED_USER" Type="Int32" />
+  </EntityType>
+  <EntityType Name="COUNTRY">
+    <Key>
+      <PropertyRef Name="COUNTRY_CODE" />
+    </Key>
+    <Property Name="COUNTRY_CODE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COUNTRY_NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CODE_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PHONE">
+    <Key>
+      <PropertyRef Name="PHONE_CODE" />
+    </Key>
+    <Property Name="PHONE_CODE" Type="Int32" Nullable="false" />
+    <Property Name="PHONE_TYPE_ID" Type="Int32" />
+    <Property Name="PHONE_NUMBER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AREA_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="COUNTRY_CODE" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="COMPANY_CODE" Type="Int32" />
+    <Property Name="CONTACT_CODE" Type="Int32" />
+    <Property Name="OWNER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="REGION_CODE" Type="Int32" />
+    <Property Name="CREATE_DATE" Type="DateTime" Precision="3" />
+    <Property Name="CREATE_USER" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LASTUP_DATE" Type="DateTime" Precision="3" />
+    <Property Name="LAST_UPDATE_USER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ADDRESS_CODE" Type="Int32" />
+    <Property Name="INTERNAL_CODE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

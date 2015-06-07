@@ -1,0 +1,25 @@
+﻿@(Html.Kendo().Grid<CrmMini.Controllers.timeGridModelView>()
+        .Name("grid")
+        .Columns(columns =>
+        {
+            for (int i = 1; i <= (Model.gunler.Count() - 1); i++)
+            {
+                string colTemp = i.ToString();
+                columns.Template(gl => gl.gunler).Title(colTemp).Width(100);
+            }
+
+
+        })
+                .Editable(editable => editable.Mode(GridEditMode.InLine))
+        .Pageable()
+        .Sortable()
+        .Scrollable()
+        .Filterable()
+        .Groupable()
+        .HtmlAttributes(new { style = "height:550px;" })
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .PageSize(20)
+            .Model(model => model.Id(x => x.ay))
+        )
+)

@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container-fluid">
+    <h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <div class="row">
+        <div class="col-xs-18 col-md-12">
+            @(Html.Kendo().Grid<CrmMini.Models.PROJECT>()
+        .Name("grid")
+        .Columns(columns =>
+        {
+            columns.Bound(p => p.PROJECT_CODE).Filterable(false);
+            columns.Bound(p => p.NAME);
+            columns.Bound(p => p.COMPANY_CODE);
+            columns.Bound(p => p.SDATE);
+            // columns.Command(command => command.Edit()).Width(100);
+        })
+                .Editable(editable => editable.Mode(GridEditMode.InLine))
+        .Pageable()
+        .Sortable()
+        .Scrollable()
+        .Filterable()
+        .Groupable()
+        .HtmlAttributes(new { style = "height:550px;" })
+        .DataSource(dataSource => dataSource
+            .Ajax()
+            .PageSize(20)
+            .Model(model => model.Id(x => x.COMPANY_CODE))
+            .Read(read => read.Action("Project_Read", "Grid"))
+                    .Update(update => update.Action("Edit", "Company", new { }))
+        )
+            )
+        </div>
+    </div>
+</div>

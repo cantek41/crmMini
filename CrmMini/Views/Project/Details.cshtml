@@ -1,0 +1,162 @@
+﻿@model CrmMini.Models.PROJECT
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PROJECT</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.COMPANY_CODE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COMPANY_CODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CONTACT_CODE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CONTACT_CODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OPPORTUNITY_CODE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OPPORTUNITY_CODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CONTRACT_CODE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CONTRACT_CODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOCUMENT_DATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOCUMENT_DATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SDATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EDATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EDATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.APPOINTED_USER_CODE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.APPOINTED_USER_CODE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLOSED_DATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLOSED_DATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CREATE_DATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CREATE_DATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CREATE_USER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CREATE_USER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LAST_UPDATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LAST_UPDATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LAST_UPDATE_USER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LAST_UPDATE_USER)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ROW_ORDER_NO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ROW_ORDER_NO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.STOK_NAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STOK_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RS_DATE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RS_DATE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLOSED_USER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLOSED_USER)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PROJECT_CODE }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

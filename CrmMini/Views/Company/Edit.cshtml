@@ -1,0 +1,103 @@
+﻿@model CrmMini.Models.COMPANY
+
+@{
+    ViewBag.Title = "Edit";
+}
+<script src="~/Scripts/special/company.js"></script>
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>COMPANY</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.COMPANY_COMMERCIAL_CODE, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.COMPANY_COMMERCIAL_CODE)
+                @Html.ValidationMessageFor(model => model.COMPANY_COMMERCIAL_CODE)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.COMPANY_NAME, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.COMPANY_NAME)
+                @Html.ValidationMessageFor(model => model.COMPANY_NAME)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.COMPANY_REGION, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.COMPANY_REGION, new SelectList((System.Collections.IEnumerable)ViewData["ulke"], "COUNTRY_NAME", "COUNTRY_NAME", "--"))
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Ülke", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ulke",
+    new SelectList((System.Collections.IEnumerable)ViewData["ulke"], "COUNTRY_NAME", "COUNTRY_NAME"), "--", new { onchange = "ilgetir()" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Şehir", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("iller", new[] { new SelectListItem { Text = "", Value = "0" } }, "--Lütfen Seçiniz--", new { onchange = "ilcegetir()" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("İlçe", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ilce", new[] { new SelectListItem { Text = "", Value = "0" } }, "--Lütfen Seçiniz--")
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.ADDRESS, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.Editor("Address")
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.PHONE, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @(Html.Kendo().MaskedTextBox()
+          .Name("phone")
+                  .Mask("+99(999) 000-0000")
+                )
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MAIL, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MAIL)
+                @Html.ValidationMessageFor(model => model.MAIL)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WEBADDRESS, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.WEBADDRESS)
+                @Html.ValidationMessageFor(model => model.WEBADDRESS)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

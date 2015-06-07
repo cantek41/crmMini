@@ -1,0 +1,126 @@
+﻿@model CrmMini.Models.ACTIVITY
+
+@{
+    ViewBag.Title = "Create";
+}
+<script src="~/Scripts/special/activity.js"></script>
+<div class="container-fluid">
+    <h2>Create</h2>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>ACTIVITY</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.COMPANY_CODE, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.COMPANY_CODE,
+    new SelectList((System.Collections.IEnumerable)ViewData["company"], "COMPANY_CODE", "COMPANY_NAME"), "--Lütfen Seçiniz--")
+                    @Html.ValidationMessageFor(model => model.COMPANY_CODE)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.CONTACT_CODE, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.CONTACT_CODE,new[] { new SelectListItem { Text = "", Value = "0" } })
+                    @Html.ValidationMessageFor(model => model.CONTACT_CODE)
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.ACTIVITY_TYPE, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                  @Html.DropDownListFor(model => model.ACTIVITY_TYPE,
+    new SelectList((System.Collections.IEnumerable)ViewData["aktiviteType"], "code", "name"))
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.SDATE, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.SDATE)
+                    @Html.ValidationMessageFor(model => model.SDATE)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.EDATE, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.EDATE)
+                    @Html.ValidationMessageFor(model => model.EDATE)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.DURATION, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.DURATION)
+                    @Html.ValidationMessageFor(model => model.DURATION)
+                </div>
+            </div>
+
+           
+            <div class="form-group">
+                @Html.LabelFor(model => model.NOTE, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.NOTE)
+                    @Html.ValidationMessageFor(model => model.NOTE)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.SUBJECT, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.SUBJECT)
+                    @Html.ValidationMessageFor(model => model.SUBJECT)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.LOCATION, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.LOCATION, new SelectList((System.Collections.IEnumerable)ViewData["nerde"], "code", "name"), "--Lütfen Seçiniz--")
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.PROJECT, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.PROJECT, new[] { new SelectListItem { Text = "", Value = "0" } })
+                    @Html.ValidationMessageFor(model => model.PROJECT)
+                </div>
+            </div>          
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.APPOINTED_USER_CODE, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.APPOINTED_USER_CODE, new SelectList((System.Collections.IEnumerable)ViewData["user"], "USER_CODE", "USER_NAME","--"))
+                    @Html.ValidationMessageFor(model => model.APPOINTED_USER_CODE)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.OPENORCLOSE, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">                  
+                    @Html.DropDownListFor(model => model.OPENORCLOSE, new SelectList((System.Collections.IEnumerable)ViewData["open"], "code", "name", 0))
+                    @Html.ValidationMessageFor(model => model.OPENORCLOSE)
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</div>
